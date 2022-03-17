@@ -265,20 +265,19 @@ img {
   margin-right: 30px;
 }
 .features-item-thumb {
-  display: flex;
-  /* position: relative; */
+  position: relative;
 }
 .features-thumb {
   display: flex;
   position: absolute;
-  max-width: 370px;
+  bottom: 0;
+  min-width: 370px;
   height: 70px;
   justify-content: center;
   align-items: center;
   background-color: var(--bg-secondary-gradient);
 }
 .features-caption {
-  display: inline-block;
   color: var(--white-text-color);
 
   font-weight: 700;
