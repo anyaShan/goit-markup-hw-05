@@ -567,11 +567,11 @@ footer > .conteiner {
 }
 
 .hero-button {
+  min-width: 200px;
+  padding: 10px 32px;
   background-color: var(--accent-color);
   color: var(--white-text-color);
   cursor: pointer;
-  min-width: 200px;
-  padding: 10px 32px;
 
   font-weight: 700;
   font-size: 16px;
@@ -584,10 +584,10 @@ footer > .conteiner {
   color: var(--white-text-color);
 }
 .works-button {
+  padding: 6px 22px;
   background-color: var(--background-secondary-color);
   color: var(--secondary-text-color);
   cursor: pointer;
-  padding: 6px 22px;
 
   font-weight: 500;
   font-size: 16px;
@@ -612,13 +612,21 @@ footer > .conteiner {
 
   background-color: var(--bg-model-window);
 }
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   min-width: 528px;
   min-height: 581px;
+  padding: 40px;
+
   border-radius: 4px;
   background-color: var(--background-primary-color);
   box-shadow: var(--box-shadow);
@@ -627,9 +635,11 @@ footer > .conteiner {
   position: absolute;
   top: 8px;
   right: 8px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin: 0;
   padding: 0;
   width: 30px;
