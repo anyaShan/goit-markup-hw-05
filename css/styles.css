@@ -11,6 +11,7 @@
   --white-text-color: #ffffff;
   --black-text-color: #000000;
   --accent-color: #2196f3;
+  --accent-color-transparency: rgba(33, 150, 243, 0.9);
   --accent-color-secondary: #188ce8;
   --background-primary-color: #ffffff;
   --background-accent-color: #2f303a;
@@ -188,7 +189,7 @@ img {
   background-image: linear-gradient(to right, var(--bg-linear-gradient), var(--bg-linear-gradient)),
     url(../images/bg-img.jpg);
   background-size: 1600px;
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   text-align: center;
 }
@@ -508,6 +509,29 @@ footer > .conteiner {
 }
 .works-item-link:hover {
   box-shadow: var(--box-shadow-works);
+}
+.works-item-thumb {
+  position: relative;
+}
+.works-info-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: var(--accent-color-transparency);
+
+  overflow: auto;
+  opacity: 0;
+}
+.works-item-link:hover .works-info-thumb {
+  opacity: 1;
+}
+.works-info {
+  color: var(--white-text-color);
+  font-size: 18px;
+  line-height: 1.56;
 }
 .works-card {
   border: var(--border-secondary);
