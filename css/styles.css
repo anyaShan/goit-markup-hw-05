@@ -129,6 +129,7 @@ img {
   padding: 32px 0;
   color: var(--secondary-text-color);
 }
+.header-nav-list .item.current,
 .header-nav-list .link.current,
 .header-nav-list .link:hover,
 .header-nav-list .link:focus {
@@ -136,6 +137,14 @@ img {
 }
 .header-nav-list > .item:not(:last-child) {
   margin-right: 50px;
+}
+.header-nav-list > .item.current::after {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* Header Contects */
