@@ -156,7 +156,8 @@ img {
 }
 .header-nav-list > .item.current::after {
   position: absolute;
-  bottom: 0;
+  left: 0;
+  bottom: -1px;
 
   display: inline-block;
   content: '';
@@ -380,6 +381,7 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
+  transition: fill var(--transition);
 }
 .team-links-icon:hover .icon,
 .team-links-icon:focus .icon {
@@ -446,10 +448,12 @@ footer > .conteiner {
 }
 .address-list .map {
   color: var(--white-text-color);
+  transition: color var(--transition);
 }
 .address-list .mail,
 .address-list .tel {
   color: var(--address-color);
+  transition: color var(--transition);
 }
 .address-list .map:hover,
 .address-list .mail:hover,
@@ -529,12 +533,15 @@ footer > .conteiner {
 }
 .works-item-link {
   display: block;
+  transition: box-shadow var(--transition);
 }
-.works-item-link:hover {
+.works-item-link:hover,
+.works-item-link:focus {
   box-shadow: var(--box-shadow-works);
 }
 .works-item-thumb {
   position: relative;
+  overflow: hidden;
 }
 .works-info-thumb {
   position: absolute;
@@ -551,7 +558,8 @@ footer > .conteiner {
   overflow: auto;
   opacity: 0;
 }
-.works-item-link:hover .works-info-thumb {
+.works-item-link:hover .works-info-thumb,
+.works-item-link:focus .works-info-thumb {
   transform: translateY(0);
   opacity: 1;
 }
@@ -590,6 +598,7 @@ footer > .conteiner {
   text-align: center;
   border: 0;
   border-radius: 4px;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .hero-button {
